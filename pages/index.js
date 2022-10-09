@@ -35,8 +35,7 @@ const Background = styled.div`
   }
 `;
 const Title = styled.div`
-font-family: "Kalam";
+  font-family: "Kalam";
   text-align: center;
   font-size: 1.3em;
-  
 `;

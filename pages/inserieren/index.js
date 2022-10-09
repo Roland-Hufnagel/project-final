@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import InseratForm from "../../components/InseratForm";
+//import InseratForm from "../../components/InseratForm";
 import styled from "styled-components";
 
 export default function CreateInserat() {
@@ -41,12 +41,19 @@ const StyledForm = styled.form`
   height: 500px;
   margin: 10px auto;
   border: 1px solid black;
+  
   & * {
+    font-family: "Noto Sans";
     display: block;
     width: 90%;
     margin: 20px auto;
+    font-size: 1.1em;
+    padding: 0.3em;
   }
-  & button{
-    font-size: 1.0em;
+  & button {
+    font-size: 1.2em;
+  }
+  & h2{
+    font-size: 1.5em;
   }
 `;
