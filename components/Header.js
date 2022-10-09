@@ -7,14 +7,14 @@ export default function Header() {
 
   return (
     <StyledHeader>
-      <Link href="/" passHref>
-        <StyledLink>Home</StyledLink>
+      <Link href="/"  passHref>
+        <StyledLink active={pathname==="/"}>Home</StyledLink>
       </Link>
-      <Link href="/angebote" passHref>
-        <StyledLink>Angebote</StyledLink>
+      <Link href="/angebote" passHref >
+        <StyledLink active={pathname==="/angebote"}>Angebote</StyledLink>
       </Link>
       <Link href="/agb" passHref>
-        <StyledLink>AGB</StyledLink>
+        <StyledLink active={pathname==="/agb"}>AGB</StyledLink>
       </Link>
     </StyledHeader>
   );
@@ -31,12 +31,12 @@ const StyledLink = styled.a`
   font-size: 1.5rem;
   font-family: monospace;
   padding: 10px;
+  background-color: ${({ active }) => (active ? "white" : "lightblue")};
+  margin: 5px;
 
-  &.active {
-    background-color: white;
-  }
   &:hover {
     cursor: pointer;
+    color: black;
     background-color: white;
   }
 `;
