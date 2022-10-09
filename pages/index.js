@@ -3,21 +3,23 @@ import styled from "styled-components";
 
 export default function Home() {
   return (
-    <><h1>Gutes Geben</h1>
-    <p>Eine Initiative von Roland Hufnagel</p>
-    <Background>
+    <>
+      <Title>
+        <h1>Gutes Geben</h1>
+        <p>Eine Initiative von Roland Hufnagel und neue fische</p>
+      </Title>
+      <Background>
         <Image
           src="/../public/assets/img/tangerine.jpg"
           alt="Schöne Fische"
           layout="responsive"
-          width={4000}
-          height={3000}
+          width={3000}
+          height={4000}
         />
       </Background>
     </>
-  )
+  );
 }
-
 
 const Background = styled.div`
   position: absolute;
@@ -31,4 +33,9 @@ const Background = styled.div`
   @media (max-width: 600px) {
     display: none;
   }
+`;
+const Title = styled.div`
+font-family: "Kalam";
+  text-align: center;
+  
 `;

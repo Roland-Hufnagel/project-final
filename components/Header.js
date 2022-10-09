@@ -24,6 +24,7 @@ const StyledHeader = styled.header`
   height: 4rem;
   background-color: lightblue;
   text-align: center;
+  padding-top: 20px;
 `;
 const StyledLink = styled.a`
   all: unset;
