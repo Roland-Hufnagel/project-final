@@ -13,6 +13,9 @@ export default function Header() {
       <Link href="/angebote" passHref >
         <StyledLink active={pathname==="/angebote"}>Angebote</StyledLink>
       </Link>
+      <Link href="/inserieren" passHref>
+        <StyledLink active={pathname==="/inserieren/create"}>Inserieren</StyledLink>
+      </Link>
       <Link href="/agb" passHref>
         <StyledLink active={pathname==="/agb"}>AGB</StyledLink>
       </Link>

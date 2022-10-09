@@ -27,7 +27,8 @@ export default function Angebot({ angebot }) {
 }
 const AngebotCard = styled.article`
   max-width: 400px;
-  height: 300px;
+  min-height: 200px;
+  margin: 10px auto;
   border: 2px solid black;
   background-color: #fffdd0;
   padding: 20px;

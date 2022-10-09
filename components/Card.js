@@ -22,6 +22,7 @@ const StyledCard = styled.article`
   border-radius: 0.5em;
   background-color: #fffdd0;
   margin: 10px auto;
+  max-width: 400px;
 `;
 const StyledLink = styled.a`
 &:hover{
