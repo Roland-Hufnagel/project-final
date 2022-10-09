@@ -10,7 +10,7 @@ export default function Home() {
       </Title>
       <Background>
         <Image
-          src="/../assets/img/tangerine.jpg"
+          src="/assets/img/tangerine.jpg"
           alt="Schöne Fische"
           layout="responsive"
           width={3000}
