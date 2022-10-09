@@ -17,17 +17,27 @@ async function getAllAngebote() {
   return sanitizedAngebote;
 }
 async function getAngebotById(id) {
-  let result;
-  data.map((angebot) => {
-    console.log("-->", angebot.id, id);
-    if (angebot.id === id) {
-      console.log("------->", { ...angebot });
-      result = {
-        ...angebot,
-      };
-    }
-  });
-  return result;
+  await dbConnect();
+  const angebot = await Offer.findById(id);
+  const sanitizedAngebot = {
+    id: angebot.id,
+    title: angebot.title,
+    description: angebot.description,
+  };
+  return sanitizedAngebot;
 }
+// async function getAngebotById(id) {
+//   let result;
+//   data.map((angebot) => {
+//     console.log("-->", angebot.id, id);
+//     if (angebot.id === id) {
+//       console.log("------->", { ...angebot });
+//       result = {
+//         ...angebot,
+//       };
+//     }
+//   });
+//   return result;
+// }
 
 export { getAllAngebote, getAngebotById };
