@@ -4,6 +4,7 @@ import Card from "../../components/Card";
 
 export async function getServerSideProps() {
   const angebote = await getAllAngebote();
+  console.log("-->", angebote)
   return {
     props: { angebote: angebote },
   };
