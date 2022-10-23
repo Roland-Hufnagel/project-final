@@ -1,11 +1,21 @@
 import Image from "next/image";
 import styled from "styled-components";
 
-export default function Home() {
+export async function getServerSideProps(context) {
+  const { req } = context;
+  const host = req.headers.host;
+  return {
+    props: {
+      host: host,
+    },
+  };
+}
+
+export default function Home({ host }) {
   return (
     <>
       <Title>
-        <h1>Gutes Geben</h1>
+        <h1>{host}</h1>
         <p>Eine Initiative von Roland Hufnagel und neue fische</p>
       </Title>
       <Background>
